@@ -5,8 +5,6 @@ USER root
 WORKDIR /var/www/html
 
 RUN apt update && apt install -y \
-        nodejs \
-        npm \
         libpng-dev \
         libpq-dev \
         zlib1g-dev \
@@ -24,6 +22,11 @@ RUN apt update && apt install -y \
         && docker-php-ext-install mysqli \
         && docker-php-ext-install zip \
         && docker-php-source delete
+		
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get -y install nodejs
+RUN apt-get -y install npm
+RUN npm install -g npm@8.14.0
 
 COPY .docker/vhost.conf /etc/apache2/sites-available/000-default.conf
 
