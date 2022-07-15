@@ -19,14 +19,15 @@
 
 #API link: [GitHub](https://github.com/giangnhattruong/laravel-simple-todo-api) -->
 ## Cài đặt:
-1. Clone project: ```git clone https://github.com/giangnhattruong/docker-apache-psql-laravel.git```
-2. Visit app directory: ```cd docker-apache-psql-laravel```
-3. Run docker compose: ```docker-compose up -d --build```
-4. Open app container terminal: ```docker exec -it laravel-app bash``` or ```docker exec -it laravel-app /bin/bash``` or ```winpty docker exec -it laravel-app /bin/bash```
-5. Create .env file: ```cp .env.example .env```
-6. Run: ```composer install```
-7. Run: ```npm install```
-8. Database & seed, run: ```php artisan migrate --seed```
+1. Install Docker
+2. Clone project: ```git clone https://github.com/giangnhattruong/docker-apache-psql-laravel.git```
+3. Visit app directory: ```cd docker-apache-psql-laravel```
+4. Run docker compose: ```docker-compose up -d --build```
+5. Open app container terminal: ```docker exec -it laravel-app bash``` or ```docker exec -it laravel-app /bin/bash``` or ```winpty docker exec -it laravel-app /bin/bash```
+6. Create .env file: ```cp .env.example .env```
+7. Run: ```composer install```
+8. Run: ```npm install```
+9. Database & seed, run: ```php artisan migrate --seed```
 
 ## Todo route list
 - GET: [localhost:8000/api/todos](http://localhost:8000/api/todos)
