@@ -25,7 +25,6 @@ RUN apt update && apt install -y \
 		
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get -y install nodejs
-RUN apt-get -y install npm
 RUN npm install -g npm@8.14.0
 
 COPY .docker/vhost.conf /etc/apache2/sites-available/000-default.conf
