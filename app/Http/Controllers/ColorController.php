@@ -24,6 +24,8 @@ class ColorController extends Controller
     }
 
     public function store(StoreColorRequest $request) {
+        return response()->json([$request->validated()['name']]);
+
         $color = Color::create([
             'name' => $request->validated()['name'],
         ]);
