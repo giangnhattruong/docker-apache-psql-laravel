@@ -19,17 +19,16 @@ services:
         container_name: laravel-db
         restart: unless-stopped
         ports:
-            - "5432:5432"
+            - "5433:5432"
         environment:
             POSTGRES_DB: laravel
             POSTGRES_PASSWORD: postgres
             POSTGRES_USER: postgres
         volumes:
             - ./database/dbdata:/var/lib/postgresql/data
-            # - ./database/pgsql/init:/docker-entrypoint-initdb.d
+            - ./database/pgsql/init:/docker-entrypoint-initdb.d
         networks:
             - laravel-net
-
 networks:
     laravel-net:
         driver: bridge
