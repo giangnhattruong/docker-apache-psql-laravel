@@ -27,7 +27,7 @@
 6. Create .env file: ```cp .env.example .env```
 7. Run: ```composer install```
 8. Run: ```npm install```
-9. Database & seed, run: ```php artisan migrate --seed```
+9. Database & seed, run: ```php artisan migrate --seed``` or ```php artisan migrate:refresh --seed```
 
 ## Todo route list
 - GET: [localhost:8000/api/todos](http://localhost:8000/api/todos)
