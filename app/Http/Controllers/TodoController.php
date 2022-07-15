@@ -87,7 +87,7 @@ class TodoController extends Controller
         }
 
         // Get final result
-        $todos = $baseTodoQuery->with('color')->distinct()->simplePaginate($pageSize);
+        $todos = $baseTodoQuery->with('color')->distinct()->paginate($pageSize);
 
         if (empty($todos->toArray()['data'])) {
             return response()->json(
