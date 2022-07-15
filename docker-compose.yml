@@ -26,7 +26,7 @@ services:
             POSTGRES_USER: postgres
         volumes:
             - ./database/dbdata:/var/lib/postgresql/data
-            - ./database/pgsql/init:/docker-entrypoint-initdb.d
+            # - ./database/pgsql/init:/docker-entrypoint-initdb.d
         networks:
             - laravel-net
 
